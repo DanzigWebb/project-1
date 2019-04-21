@@ -1,0 +1,180 @@
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+
+body
+  font-size: $txt-size
+  margin: auto
+  position: relative
+  font-size: 16px
+  line-height: 1.4
+  font-family: 'Ghotam-font', sans-serif
+  color: #333333
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+main
+  overflow: hidden
+.title-1
+  font-size: $h1-size
+  font-weight: bold
+  text-transform: uppercase
+  text-align: center
+.title-1.accent
+  color: $accent
+
+.title-2
+  font-size: $h2-size
+  text-align: center
+  font-weight: bold
+  text-transform: uppercase
+  padding: 0 10px
+.t-center
+  text-align: center
+.t-white
+  color: #fff
+.heading
+  text-align: center
+  padding: 10px 20px
+  hr 
+    width: 70px
+    height: 4px
+    display: block
+    background-color: #333
+    border: none
+    margin: 20px auto
+    margin-bottom: 40px
+
+.land-button
+  display: flex
+  justify-content: center
+  &--margin
+    margin: 60px 0
+.button
+    text-transform: uppercase
+    text-decoration: none
+    border-radius: 0px
+    color: #000
+    font-size: 13px
+    font-weight: 600
+    padding: 10px 20px 10px 18px
+    transition: all 0.5s ease 0s
+    background: #ffa211
+    letter-spacing: 1px
+    border: 4px double #eee
+    margin: 10px 0 -10px 0
+
+p
+  color: $p-color
+  font-weight: normal
+  line-height: normal
+  font-style: normal
+
+.container
+  max-width: 1170px
+  padding: 0 15px
+  margin: auto
+
+.link
+  text-decoration: none
+  transition: $anim
+  &:hover
+    color: $accent
+// slick
+.slick-dotted.slick-slider
+  margin-bottom: 30px
+
+.offer-list-content
+  width: 40%
+.slick-dots
+  display: block
+  width: 100%
+  padding: 0
+  margin: 0
+  list-style: none
+  text-align: center
+  margin-top: 10px
+.slick-dots li
+  position: relative
+  display: inline-block
+  width: 20px
+  height: 20px
+  margin: 0 8px
+  padding: 0
+  cursor: pointer
+.slick-dots li button
+  font-size: 0
+  line-height: 0
+  display: block
+  width: 20px
+  height: 20px
+  padding: 5px
+  cursor: pointer
+  color: transparent
+  border: 0
+  outline: none
+  background: transparent
+.slick-dots li button:hover,
+.slick-dots li button:focus
+  outline: none
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+  opacity: 1
+.slick-dots li button:before
+  font-family: 'slick'
+  font-size: 80px
+  margin: 0 10px
+  line-height: 20px
+  position: absolute
+  top: 0
+  left: 0
+  width: 20px
+  height: 20px
+  content: '•'
+  text-align: center
+  opacity: .25
+  color: $slick-dots
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+.slick-dots li.slick-active button:before
+  opacity: 1
+  color: $slick-dots-active
+
+
+
+
+// bottom
+.footer-adress
+  background-color: $accent
+  display: flex
+  flex-direction: column
+  align-items: center
+.adress
+  text-align: center
+  margin: 0
+  padding: 10px
+  color: #dedede
+.policy
+  margin-bottom: 30px
+  text-align: center
+  color: #dedede
+
+.my-menu-button
+  display: none
+  +media-breakpoint-down(md)
+    display: block
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+  background-color: #fff
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after
+  background-color: #fff
+.hamburger-box
+  z-index: -9
+.hamburger-inner
+  z-index: -9
