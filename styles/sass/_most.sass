@@ -11,7 +11,7 @@ body
   position: relative
   font-size: 16px
   line-height: 1.4
-  font-family: 'Ghotam-font', sans-serif
+  font-family: $line-font
   color: #333333
   input, textarea
     border: #666 1px solid
@@ -27,15 +27,21 @@ main
   font-weight: bold
   text-transform: uppercase
   text-align: center
+  font-family: $main-font
 .title-1.accent
   color: $accent
 
 .title-2
   font-size: $h2-size
   text-align: center
-  font-weight: bold
+  font-weight: normal
   text-transform: uppercase
   padding: 0 10px
+  font-family: $main-font
+
+h1, h2, h3, h4, h5
+  font-family: $main-font
+
 .t-center
   text-align: center
 .t-white
@@ -51,7 +57,10 @@ main
     border: none
     margin: 20px auto
     margin-bottom: 40px
-
+  p
+    font-size: 18px
+    color: #666
+    font-family: $main-font
 .land-button
   display: flex
   justify-content: center
