@@ -71,6 +71,9 @@
       line-height: 40px
 
 .header-menu
+  img
+    width: 50%
+    padding-top: 0
   +media-breakpoint-down(md)
     display: flex
     flex-direction: column
@@ -84,8 +87,10 @@
     transition: $anim
     width: 50%
     min-width: 300px
+    max-width: 320px
     padding-top: 40px
     overflow-x: scroll
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5)
     .header__link
       color: #000
       margin: 10px 0
@@ -96,6 +101,21 @@
 .header-menu.is-active
   left: 0
 
+.header-social
+  margin-top: $gutter
+  .fab
+    display: inline-block
+    margin: 0 2px
+    width: 28px
+    height: 28px
+    line-height: 28px
+    color: #888
+    background-color: #eee
+    text-align: center
+    transition: $anim
+    &:hover
+      color: #fff
+      background-color: $accent
 
 .about
   background-image: url(../img/patt_bg.png)
@@ -287,8 +307,43 @@
       +media-breakpoint-down(xs)
        max-width: 70%
 
+.achivements
+  background-image: url(../img/08_home.jpg)
+  background-size: cover
+  min-height: 450px
+  display: flex
+  align-items: center
+  padding: 60px 0
+  &-item
+    text-align: center
+    margin: 15px 0
+    border: 20px double #999
+    padding: 35px
+    border-color: #ffa211 #ffa211 #ffa211
+    background: #fff
+  &-icon
+    font-size: 50px 
+    color: #df8210
+    margin-bottom: 25px
+    span
+      font-weight: bold
+  &-txt
+    font-size: 26px
+    text-transform: uppercase
+    color: #333
+    font-weight: 600
+    letter-spacing: 1px
+    span
+      display: block
+      font-size: 25px
+      color: #666
+      display: block
+      font-weight: 600
+      letter-spacing: normal
+
 .skills
   background-image: url(../img/patt_bg.png)
+  padding-top: 40px
   &-icon
     width: 95px
     height: 95px

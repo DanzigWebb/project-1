@@ -3034,6 +3034,11 @@ p {
   line-height: 40px;
 }
 
+.header-menu img {
+  width: 50%;
+  padding-top: 0;
+}
+
 @media (max-width: 991.98px) {
   .header-menu {
     display: -webkit-box;
@@ -3056,8 +3061,11 @@ p {
     transition: all 0.5s ease;
     width: 50%;
     min-width: 300px;
+    max-width: 320px;
     padding-top: 40px;
     overflow-x: scroll;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
   }
   .header-menu .header__link {
     color: #000;
@@ -3072,6 +3080,28 @@ p {
 
 .header-menu.is-active {
   left: 0;
+}
+
+.header-social {
+  margin-top: 20px;
+}
+
+.header-social .fab {
+  display: inline-block;
+  margin: 0 2px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  color: #888;
+  background-color: #eee;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.header-social .fab:hover {
+  color: #fff;
+  background-color: #ffb400;
 }
 
 .about {
@@ -3412,8 +3442,58 @@ p {
   }
 }
 
+.achivements {
+  background-image: url(../img/08_home.jpg);
+  background-size: cover;
+  min-height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 60px 0;
+}
+
+.achivements-item {
+  text-align: center;
+  margin: 15px 0;
+  border: 20px double #999;
+  padding: 35px;
+  border-color: #ffa211 #ffa211 #ffa211;
+  background: #fff;
+}
+
+.achivements-icon {
+  font-size: 50px;
+  color: #df8210;
+  margin-bottom: 25px;
+}
+
+.achivements-icon span {
+  font-weight: bold;
+}
+
+.achivements-txt {
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.achivements-txt span {
+  display: block;
+  font-size: 25px;
+  color: #666;
+  display: block;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
 .skills {
   background-image: url(../img/patt_bg.png);
+  padding-top: 40px;
 }
 
 .skills-icon {
