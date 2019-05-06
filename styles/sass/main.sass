@@ -71,35 +71,52 @@
       line-height: 40px
 
 .header-menu
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 20px
+  background-color: #fff
+  position: fixed
+  top: 0
+  bottom: 0
+  z-index: 10
+  transform: translateX(-100%)
+  transition: $anim
+  width: 50%
+  min-width: 500px
+  max-width: 320px
+  padding-top: 40px
+  overflow-x: scroll
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5)
+  +media-breakpoint-down(xs)
+    min-width: 300px
   img
     width: 50%
     padding-top: 0
-  +media-breakpoint-down(md)
-    display: flex
-    flex-direction: column
-    align-items: center
-    padding: 20px
-    background-color: #fff
-    position: fixed
-    top: 0
-    bottom: 0
-    left: -100%
-    transition: $anim
-    width: 50%
-    min-width: 300px
-    max-width: 320px
-    padding-top: 40px
-    overflow-x: scroll
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5)
-    .header__link
-      color: #000
-      margin: 10px 0
-      width: auto
-      display: block
-    .header__link--about
-      margin-top: 20px
+    
+  .header__link
+    color: #000
+    width: 100%
+    display: block
+    text-align: center
+    padding: 10px
+    border-right: 4px solid transparent
+    font-family: $main-font
+    font-weight: 500
+    font-size: 15px
+    &:hover
+      border-right: 4px solid $accent
+      text-decoration: none
+      background: rgba(221, 221, 221, 0.10)
+  .header__link--about
+    margin-top: 20px
+    border-right: none
+    max-width: 60%
+    letter-spacing: 1px
+    &:hover
+      border-right: none
 .header-menu.is-active
-  left: 0
+  transform: translateX(0)
 
 .header-social
   margin-top: $gutter
@@ -379,6 +396,33 @@
       padding: 40px 30px
     &-txt
       flex-basis: 80%
+
+.formarea
+  min-height: 600px
+  padding: 120px 0
+  background-image: url(../img/03_home.jpg)
+  background-size: cover
+  &-form
+    padding: 80px 20px
+    display: flex
+    flex-direction: column
+    background-color: #fff
+    border: 5px double #ffa211
+    box-shadow: 0px 2px 5px #333
+    +media-breakpoint-down(xs)
+      padding: 40px 10px
+    input
+      height: 50px
+      width: 100%
+      font-size: 14px
+      margin-top: 15px
+    textarea
+      margin: 20px 0
+    input, textarea
+      padding-left: 15px
+      border: 4px double #333
+      background-color: #fff
+
 // end custom
 
 @import "media"
